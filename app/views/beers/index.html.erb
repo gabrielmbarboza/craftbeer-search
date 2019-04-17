@@ -5,15 +5,26 @@
 </nav>
 <div class="container">
     <div class="row">
-        <form class="col s12">
+        <form class="col s12" action="/">
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s8">
                     <i class="material-icons prefix">search</i>
-                    <input id="icon_prefix" type="text" class="validate">
+                    <input id="icon_prefix" type="text" class="validate" name="keywords">
                     <label for="icon_prefix">Are you looking for?</label>
                 </div>
             </div>
        </form>
+       <% if @beers.present? %>
+         <% @beers.each do |beer| %>   
+           <div class="row">
+                <h1><%= beer.name %> (<%= beer.brand.name %>)</h1>
+                <br /> 
+                <h3><%= beer.variety.style.name %></h3> 
+                <br />
+                <span><%= beer.variety.name %>: <%= beer.variety.description %> </span>
+           </div>
+         <% end %>   
+       <% end %>
     </div>
 </div>
         

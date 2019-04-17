@@ -39,10 +39,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Intelligent search made easy with Rails and Elasticsearch
 gem 'searchkick'
 
+#gem 'elasticsearch', '~> 6.2.0'
+
 gem 'jquery-rails'
  
 gem 'materialize-sass'
 gem 'material_icons'
+
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
